@@ -1,0 +1,67 @@
+// const yoga = {
+//   time: '20 mins',
+//   rule: 'Pay attention to the posture',
+//   technique: 'KYM Yoga',
+// };
+
+// const routine = function (place, city) {
+//   const name = 'Jagadeesh';
+
+//   console.log(this.time, this.technique, place, city);
+// };
+
+// routine.call(meditation, 'India', 'Chennai');
+
+// routine.apply(meditation, ['India', 'Chennai']); //apply method is same as call, however apply method takes the argument as Array
+// routine.call(yoga, 'India', 'Mumbai');
+// //In Modern javascript we dont have to use apply() method instead pass the array using spread operator in the call() method
+// const place = ['UK', 'London'];
+// routine.call(yoga, ...place);
+// routine.apply(yoga, place);
+
+//bind
+// const toStayFocus = routine.bind(meditation); // Bind will make a new function
+// const toCalmDown = routine.bind(yoga);
+// toStayFocus(...place);
+// toCalmDown(...place);
+
+// //Try above bind concept with arrow function
+// const addVAT = rate => value => value + value * rate;
+// const addVATTax = addVAT(0.23);
+// console.log(addVATTax(100));
+
+// console.log(addVAT(0.23)(100));
+
+//coding challenge
+// const poll = {
+//   question: 'What is your favourite programming language?',
+//   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+//   answers: new Array(4).fill(0),
+//   registerNewAnswer(callback) {
+//     const answer = Number(
+//       prompt(
+//         `${this.question}\n${this.options.join('\n')}\nWrite option number`
+//       )
+//     );
+//     if (!Number.isNaN(answer) && answer < this.options.length) {
+//       this.answers[answer] += 1;
+//     } else {
+//       alert('not a valid input');
+//     }
+//     callback(this.answers);
+//     callback(this.answers, 'string');
+//   },
+// };
+
+// const displayResults = function (ch, type = 'array') {
+//   type === 'array' && console.log(ch);
+//   type === 'string' && console.log(`In String format ${ch}`);
+// };
+
+// //const source = poll.registerNewAnswer().bind(poll.displayResults);
+
+// document.querySelector('.poll').addEventListener('click', function () {
+//   poll.registerNewAnswer(displayResults);
+// });
+
+// console.log(poll.options.join(' '));
